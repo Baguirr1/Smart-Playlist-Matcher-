@@ -1,5 +1,5 @@
 # Smart-Playlist-Matcher-
-# Project Overview
+## Project Overview
 This project implements a 'Smart Playlist Matcher' that allows users to upload an audio clip and find similar tracks from a synthetic catalog based on mood and tempo. It uses machine learning for mood prediction and feature extraction to provide personalized music recommendations.
 
 How to Run
