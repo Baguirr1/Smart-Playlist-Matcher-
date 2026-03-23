@@ -18,10 +18,10 @@ How to Add More Catalog Tracks
 Option 1: Manually adding a new synthetic track (like the initial generation)
 
 To add another synthetic track similar to how the initial catalog was created, you can modify or re-run the relevant code. For example, to add another 'happy' track
+```
 import numpy as np
 import soundfile as sf
 import pandas as pd
-
 # --- Example of adding a new synthetic track --- #
 new_track_idx = len(df_catalog) # Get a new unique index
 new_mood = 'happy'
@@ -53,11 +53,12 @@ else:
     print(f"Failed to extract features for synthetic track 'track_{new_track_idx}'.")
 
 display(df_catalog.tail())
+```
 
 Option 2: Adding a track from an uploaded audio file (simulating Gradio upload)
 
 If you have an audio file you want to add (e.g., downloaded, or one that was previously uploaded to Gradio), you can use the add_track_from_gradio_input function defined in a previous cell. This function will copy your file into the catalog/ directory, extract its features, predict its mood and BPM, and add it to df_catalog.
-
+```
 # Example of using the function to add a track from a local file
 # Replace 'path/to/your/audio.wav' with the actual path to your audio file
 # add_track_from_gradio_input('path/to/your/audio.wav')
@@ -65,6 +66,6 @@ If you have an audio file you want to add (e.g., downloaded, or one that was pre
 # Or, to re-add a track already in the catalog as a *new* entry (for testing):
 # add_track_from_gradio_input(df_catalog.iloc[5]['file_path']) # Adds a copy of an existing track as a new entry
 After adding tracks using either method, they will be available for matching in the Gradio interface.
-
+```
 Limitations
 This project serves as a conceptual demonstration and has several limitations. The audio catalog is entirely synthetic, meaning it doesn't represent the complexity or diversity of real-world music. The mood classification relies on a simple Logistic Regression model and basic audio features (MFCCs, tempo, energy), which may not accurately capture nuanced emotional content. The 'true_mood' and 'true_bpm' values in the catalog are assigned during synthetic creation rather than being accurately analyzed, potentially limiting the ground truth for matching. Lastly, the small size of the catalog and the synthetic nature of the data mean the recommendations are illustrative rather than robust for a large-scale, real-world application.
