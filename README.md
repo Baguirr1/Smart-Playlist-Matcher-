@@ -2,7 +2,7 @@
 ## Project Overview
 This project implements a 'Smart Playlist Matcher' that allows users to upload an audio clip and find similar tracks from a synthetic catalog based on mood and tempo. It uses machine learning for mood prediction and feature extraction to provide personalized music recommendations.
 
-How to Run
+###How to Run
 Open the Colab Notebook: Ensure you are in the Google Colab environment with this notebook open.
 Run All Cells: Go to Runtime -> Run all in the Colab menu. This will:
 Generate a synthetic audio catalog.
