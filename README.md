@@ -3,19 +3,19 @@
 This project implements a 'Smart Playlist Matcher' that allows users to upload an audio clip and find similar tracks from a synthetic catalog based on mood and tempo. It uses machine learning for mood prediction and feature extraction to provide personalized music recommendations.
 
 ### How to Run
-Open the Colab Notebook: Ensure you are in the Google Colab environment with this notebook open.
-Run All Cells: Go to Runtime -> Run all in the Colab menu. This will:
-Generate a synthetic audio catalog.
-Extract audio features and train a mood classification model.
-Initialize an SQLite database for logging queries.
-Launch the Gradio user interface.
-Interact with the Gradio App: Once the last cell finishes executing, a Gradio interface will appear directly in the notebook output (or as a public share link). You can:
-Upload an audio file (e.g., an MP3 or WAV clip).
-Adjust the 'Weight: Tempo <---> Mood' slider to prioritize matching by tempo or mood.
-Click 'Find Matches' to get recommendations.
-The app will display the detected BPM, predicted mood, a spectrogram of your uploaded audio, and up to 5 recommended tracks from the catalog.
-How to Add More Catalog Tracks
-### Option 1: Manually adding a new synthetic track (like the initial generation)
+Open the Colab Notebook: Ensure you are in the Google Colab environment with this notebook open.  
+Run All Cells: Go to Runtime -> Run all in the Colab menu. This will:  
+Generate a synthetic audio catalog.  
+Extract audio features and train a mood classification model.  
+Initialize an SQLite database for logging queries.  
+Launch the Gradio user interface.  
+Interact with the Gradio App: Once the last cell finishes executing, a Gradio interface will appear directly in the notebook output (or as a public share link). You can:  
+Upload an audio file (e.g., an MP3 or WAV clip).  
+Adjust the 'Weight: Tempo <---> Mood' slider to prioritize matching by tempo or mood.  
+Click 'Find Matches' to get recommendations.  
+The app will display the detected BPM, predicted mood, a spectrogram of your uploaded audio, and up to 5 recommended tracks from the catalog.  
+How to Add More Catalog Tracks  
+### Option 1: Manually adding a new synthetic track (like the initial generation)  
 
 To add another synthetic track similar to how the initial catalog was created, you can modify or re-run the relevant code. For example, to add another 'happy' track
 ```python
@@ -58,7 +58,7 @@ display(df_catalog.tail())
 ### Option 2: Adding a track from an uploaded audio file (simulating Gradio upload)
 
 If you have an audio file you want to add (e.g., downloaded, or one that was previously uploaded to Gradio), you can use the add_track_from_gradio_input function defined in a previous cell. This function will copy your file into the catalog/ directory, extract its features, predict its mood and BPM, and add it to df_catalog.
-```
+```python
 # Example of using the function to add a track from a local file
 # Replace 'path/to/your/audio.wav' with the actual path to your audio file
 # add_track_from_gradio_input('path/to/your/audio.wav')
