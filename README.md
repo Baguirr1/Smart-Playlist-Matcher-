@@ -2,7 +2,7 @@
 ## Project Overview
 This project implements a 'Smart Playlist Matcher' that allows users to upload an audio clip and find similar tracks from a synthetic catalog based on mood and tempo. It uses machine learning for mood prediction and feature extraction to provide personalized music recommendations.
 
-###How to Run
+### How to Run
 Open the Colab Notebook: Ensure you are in the Google Colab environment with this notebook open.
 Run All Cells: Go to Runtime -> Run all in the Colab menu. This will:
 Generate a synthetic audio catalog.
@@ -55,7 +55,7 @@ else:
 display(df_catalog.tail())
 ```
 
-Option 2: Adding a track from an uploaded audio file (simulating Gradio upload)
+### Option 2: Adding a track from an uploaded audio file (simulating Gradio upload)
 
 If you have an audio file you want to add (e.g., downloaded, or one that was previously uploaded to Gradio), you can use the add_track_from_gradio_input function defined in a previous cell. This function will copy your file into the catalog/ directory, extract its features, predict its mood and BPM, and add it to df_catalog.
 ```
@@ -67,5 +67,5 @@ If you have an audio file you want to add (e.g., downloaded, or one that was pre
 # add_track_from_gradio_input(df_catalog.iloc[5]['file_path']) # Adds a copy of an existing track as a new entry
 After adding tracks using either method, they will be available for matching in the Gradio interface.
 ```
-Limitations
+### Limitations
 This project serves as a conceptual demonstration and has several limitations. The audio catalog is entirely synthetic, meaning it doesn't represent the complexity or diversity of real-world music. The mood classification relies on a simple Logistic Regression model and basic audio features (MFCCs, tempo, energy), which may not accurately capture nuanced emotional content. The 'true_mood' and 'true_bpm' values in the catalog are assigned during synthetic creation rather than being accurately analyzed, potentially limiting the ground truth for matching. Lastly, the small size of the catalog and the synthetic nature of the data mean the recommendations are illustrative rather than robust for a large-scale, real-world application.
