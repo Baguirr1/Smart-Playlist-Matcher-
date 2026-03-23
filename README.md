@@ -18,7 +18,7 @@ How to Add More Catalog Tracks
 Option 1: Manually adding a new synthetic track (like the initial generation)
 
 To add another synthetic track similar to how the initial catalog was created, you can modify or re-run the relevant code. For example, to add another 'happy' track
-```
+```python
 import numpy as np
 import soundfile as sf
 import pandas as pd
