@@ -14,6 +14,7 @@ Upload an audio file (e.g., an MP3 or WAV clip).
 Adjust the 'Weight: Tempo <---> Mood' slider to prioritize matching by tempo or mood.  
 Click 'Find Matches' to get recommendations.  
 The app will display the detected BPM, predicted mood, a spectrogram of your uploaded audio, and up to 5 recommended tracks from the catalog.  
+
 ## How to Add More Catalog Tracks  
 ### Option 1: Manually adding a new synthetic track (like the initial generation)  
 
