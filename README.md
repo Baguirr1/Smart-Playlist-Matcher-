@@ -14,7 +14,7 @@ Upload an audio file (e.g., an MP3 or WAV clip).
 Adjust the 'Weight: Tempo <---> Mood' slider to prioritize matching by tempo or mood.  
 Click 'Find Matches' to get recommendations.  
 The app will display the detected BPM, predicted mood, a spectrogram of your uploaded audio, and up to 5 recommended tracks from the catalog.  
-How to Add More Catalog Tracks  
+## How to Add More Catalog Tracks  
 ### Option 1: Manually adding a new synthetic track (like the initial generation)  
 
 To add another synthetic track similar to how the initial catalog was created, you can modify or re-run the relevant code. For example, to add another 'happy' track
@@ -65,7 +65,8 @@ If you have an audio file you want to add (e.g., downloaded, or one that was pre
 
 # Or, to re-add a track already in the catalog as a *new* entry (for testing):
 # add_track_from_gradio_input(df_catalog.iloc[5]['file_path']) # Adds a copy of an existing track as a new entry
-After adding tracks using either method, they will be available for matching in the Gradio interface.
 ```
+After adding tracks using either method, they will be available for matching in the Gradio interface.  
+
 ### Limitations
 This project serves as a conceptual demonstration and has several limitations. The audio catalog is entirely synthetic, meaning it doesn't represent the complexity or diversity of real-world music. The mood classification relies on a simple Logistic Regression model and basic audio features (MFCCs, tempo, energy), which may not accurately capture nuanced emotional content. The 'true_mood' and 'true_bpm' values in the catalog are assigned during synthetic creation rather than being accurately analyzed, potentially limiting the ground truth for matching. Lastly, the small size of the catalog and the synthetic nature of the data mean the recommendations are illustrative rather than robust for a large-scale, real-world application.
